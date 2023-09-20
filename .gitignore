@@ -130,3 +130,6 @@ dist
 
 #intellij
 .idea
+
+# Others
+e2e/cypress/videos/todo-test.cy.js.mp4

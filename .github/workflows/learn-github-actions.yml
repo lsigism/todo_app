@@ -3,6 +3,5 @@ run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push]
 jobs:
   hello-test-bash-23:
-    runs-on: ubuntu-latest
     steps:
       - run: echo "Hello TestBash UK 2023 !!!"
