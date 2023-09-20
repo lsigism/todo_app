@@ -2,7 +2,17 @@ name: learn-github-actions
 run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push]
 jobs:
-  runs-on: ubuntu-latest
   hello-test-bash-23:
+    runs-on: ubuntu-latest
     steps:
       - run: echo "Hello TestBash UK 2023 !!!"
+  run-unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+      - run: cd src/webapp/api
+      - run: npm install
+      - run: npm run test
